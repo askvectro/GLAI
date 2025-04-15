@@ -1,107 +1,117 @@
-# 🚀 GLAI – Golang Language AI
-*A community-powered mobile assistant to generate, debug, and test Go code — right from your iOS device.*
+# 🌐 GLAI: Web App for Golang Code Generation, Debugging & Testing
 
-> Built and maintained by [Vectro Consulting Services](https://vectro.ai) as an open-source, developer-first initiative.
+![GLAI Banner](https://your-image-link-here.com) <!-- Optional header banner -->
 
----
+## 📌 Overview
+**GLAI** by *Vectro Consulting Services* is a **mobile-first**, **browser-accessible** application that empowers developers, learners, and tinkerers to generate, debug, optimize, and test Golang code using natural language prompts — no IDE required.
 
-## 📱 About GLAI
-
-**GLAI** (Golang Language AI) is an iOS app designed to help developers and learners generate Golang code using natural language prompts. Whether you're building small tools, running test cases, or fixing bugs — GLAI provides an intuitive mobile experience to bring AI-powered coding to your fingertips.
+Whether you're building an API, testing a CLI tool, or just learning Go, **GLAI** gives you the power of AI and Golang, anytime, anywhere.
 
 ---
 
-## ✨ Key Features
+## 🔧 Core Features
 
-- 🧠 **Prompt-to-Go Code Generation**  
-  Type or speak natural language prompts to generate idiomatic Go code instantly.
+### ✅ Natural Language to Go Code
+- Prompt via **text or voice**
+- Generate valid, idiomatic **Golang** code
+- Syntax highlighting & intelligent error handling
+- Common use cases: REST APIs, CLI tools, file parsers
 
-- 🐞 **Integrated Debugging**  
-  Detect compile-time and logical errors with suggested fixes and AI explanations.
+### 🐞 Built-in Debugging Suite
+- Detect **compile-time**, **logical**, and **runtime** issues
+- Structured error messages with **actionable suggestions**
+- Visual indicators for problematic lines
 
-- 🧪 **Run Unit Tests**  
-  Generate and run `go test` scripts with real-time test results and code coverage.
+### ♻️ Code Enhancement Engine
+- AI-powered **refactoring and optimization**
+- Recommendations follow **Go best practices**
+- Accept/reject suggestions with explanations
 
-- ♻️ **Code Enhancements**  
-  Get AI-driven recommendations for performance, readability, and idiomatic improvements.
+### 🧪 Run & Test Environment
+- Run Go snippets in a **secure sandbox** (Yaegi / remote execution)
+- Generate and run `go test` cases
+- View **code coverage** and **benchmark results**
 
-- 🔄 **Dependency Management**  
-  Identify outdated Go modules and receive step-by-step upgrade suggestions.
+### 🔁 Version Control & Updates
+- Track changes across generations
+- Suggest Go module updates & patch vulnerabilities
+- Built-in changelog with diff viewer
 
-- 👥 **Community Collaboration**  
-  Share code snippets, rate solutions, and contribute to a shared library of Go utilities.
+### 🌍 Community Collaboration
+- Share code in a **Vectro open community**
+- Comment, upvote/downvote, and bookmark snippets
+- Reuse shared components & libraries
 
 ---
 
-## 🧱 Architecture Overview
+## 🏛️ Ownership & Licensing
 
-```plaintext
-[ iOS App (SwiftUI) ]
-        ↓
-[ AI Prompt Processor (LLM API) ]
-        ↓
-[ Code Generator & Optimizer ]
-        ↓
-[ Debugger / Test Runner / Enhancer ]
-        ↓
-[ Output Viewer with Collaboration Tools ]
-🛠 Tech Stack
-Layer	Technology
-Frontend (iOS)	SwiftUI, Combine
-AI/Code Engine	GPT-style LLM (OpenAI or custom)
-Code Execution	Yaegi (embedded Go), or secure backend
-Testing Utility	go test, coverage tools
-Storage	Firebase, CoreData
-Collaboration	GitHub Gist API / Firebase Community
+- **Owned by:** Vectro Consulting Services  
+- **License:** [MIT](LICENSE)  
+- **Nature:** Community-driven and open-source  
+- **IP:** Infrastructure is maintained by Vectro; contributors are credited
 
-**📦 Installation**
-Note: Currently in private alpha. Public TestFlight link will be shared soon.
+---
 
-Once available:
+## 🧱 Tech Stack
 
-Download via TestFlight.
+| Layer               | Tools/Frameworks                             |
+|--------------------|----------------------------------------------|
+| Frontend           | ReactJS, TailwindCSS, TypeScript, PWA setup  |
+| Backend Services   | GoLang (Gin/Gorilla), Firebase, Supabase     |
+| Execution Runtime  | Yaegi or Remote Golang Executor (Docker)     |
+| Testing Framework  | `go test`, custom test runner                |
+| AI Layer           | GPT-4 API / Vectro-hosted fine-tuned LLM     |
 
-Open the app and start prompting!
+---
 
-Sign in to enable community features.
+## 🚀 Getting Started (Web Version)
 
-**📸 Screenshots**
-Coming soon: Mockups and Screenshots folder
+### 🔧 Dev Setup
+```bash
+git clone https://github.com/VectroConsulting/GLAI.git && cd GLAI/web
+npm install  # or yarn install
+npm run dev  # start development server
 
-🤝 Contributing
-We welcome open-source enthusiasts, iOS developers, Go programmers, and designers to contribute to GLAI!
+**🧠 Backend Execution Server (Optional)**
+cd backend-api
+go run main.go
+# Configure .env with API keys and routes
 
-How to Contribute:
-Fork this repository
+📈 Roadmap Milestones
 
-Create a new feature or fix branch:
-git checkout -b feature/your-feature-name
+**Phase	Deliverable**
 
-Commit your changes:
-git commit -m "Add your feature"
+1	Responsive UI (PWA) + Prompt-to-code MVP
+2	Debugging + Test Runner + Code Enhancer
+3	Alpha Launch (Private Testers)
+4	Community & Collaboration Layer
+5	Plugin Ecosystem + Android & Desktop Support
 
-Push to your branch:
-git push origin feature/your-feature-name
+**🤝 Contributors Welcome!**
+We're looking for contributors in:
 
-Submit a Pull Request with a clear explanation
+🔧 ReactJS, TypeScript, PWA development
 
-**Guidelines:**
-Write clean, documented code.
+💡 Golang API & Runtime Execution
 
-Follow Go and Swift best practices.
+🤖 Prompt Engineering / LLM Tuning
 
-Respect other contributors and review suggestions.
+🎨 UI/UX Design & QA
 
-📄 License
-MIT License
-GLAI is free software by Vectro Consulting Services
-Use it, improve it, share it.
+🌱 DevRel & Community Building
 
-🔗 Links
-🌐 https://vectroconsulting.com/
+**Feel free to submit a pull request or email us.**
 
-📂 Project Board
+💬 [Join Our Discord (Coming Soon)]
 
-📬 Email: ask@vectroconsulting.com
+📬 Email: act@vectroconsulting.com
 
-"Code anywhere. Test everything. Fix fast. GLAI is your AI-powered Go partner."
+✨ Let’s Build the Future of Mobile-First Go Development
+
+GLAI isn’t just an app — it’s a movement to democratize Golang development through AI and open collaboration.
+
+"Code on the go. Learn fast. Share freely" with GLAI.
+
+
+
