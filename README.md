@@ -1,117 +1,60 @@
-# 🌐 GLAI: Web App for Golang Code Generation, Debugging & Testing
+# 🚀 GLAI: AI-Powered Go Assistant (Web + iOS)  
+**Build, debug, and share Go code from anywhere** – on your phone or browser.  
+*"Write once, run anywhere" for the Go ecosystem*  
 
-![GLAI Banner](https://your-image-link-here.com) <!-- Optional header banner -->
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)  
+[![Discord](https://img.shields.io/badge/Join-Discord-blue)](https://discord.gg/your-invite-link)  
 
-## 📌 Overview
-**GLAI** by *Vectro Consulting Services* is a **mobile-first**, **browser-accessible** application that empowers developers, learners, and tinkerers to generate, debug, optimize, and test Golang code using natural language prompts — no IDE required.
-
-Whether you're building an API, testing a CLI tool, or just learning Go, **GLAI** gives you the power of AI and Golang, anytime, anywhere.
-
----
-
-## 🔧 Core Features
-
-### ✅ Natural Language to Go Code
-- Prompt via **text or voice**
-- Generate valid, idiomatic **Golang** code
-- Syntax highlighting & intelligent error handling
-- Common use cases: REST APIs, CLI tools, file parsers
-
-### 🐞 Built-in Debugging Suite
-- Detect **compile-time**, **logical**, and **runtime** issues
-- Structured error messages with **actionable suggestions**
-- Visual indicators for problematic lines
-
-### ♻️ Code Enhancement Engine
-- AI-powered **refactoring and optimization**
-- Recommendations follow **Go best practices**
-- Accept/reject suggestions with explanations
-
-### 🧪 Run & Test Environment
-- Run Go snippets in a **secure sandbox** (Yaegi / remote execution)
-- Generate and run `go test` cases
-- View **code coverage** and **benchmark results**
-
-### 🔁 Version Control & Updates
-- Track changes across generations
-- Suggest Go module updates & patch vulnerabilities
-- Built-in changelog with diff viewer
-
-### 🌍 Community Collaboration
-- Share code in a **Vectro open community**
-- Comment, upvote/downvote, and bookmark snippets
-- Reuse shared components & libraries
+<div align="center">  
+  <img src="https://example.com/gla-screenshot.png" width="800" alt="Web/iOS Screenshot">  
+</div>  
 
 ---
 
-## 🏛️ Ownership & Licensing
-
-- **Owned by:** Vectro Consulting Services  
-- **License:** [MIT](LICENSE)  
-- **Nature:** Community-driven and open-source  
-- **IP:** Infrastructure is maintained by Vectro; contributors are credited
-
----
-
-## 🧱 Tech Stack
-
-| Layer               | Tools/Frameworks                             |
-|--------------------|----------------------------------------------|
-| Frontend           | ReactJS, TailwindCSS, TypeScript, PWA setup  |
-| Backend Services   | GoLang (Gin/Gorilla), Firebase, Supabase     |
-| Execution Runtime  | Yaegi or Remote Golang Executor (Docker)     |
-| Testing Framework  | `go test`, custom test runner                |
-| AI Layer           | GPT-4 API / Vectro-hosted fine-tuned LLM     |
+## ✨ Features  
+| **Web App**                      | **iOS App**                     | **Shared Core**                |  
+|----------------------------------|---------------------------------|--------------------------------|  
+| Real-time collaborative editing  | Voice-to-code with Siri Shortcuts| GPT-4 powered code generation  |  
+| Browser-based Go IDE             | AR code visualization (ARKit)   | Cross-platform snippet sync    |  
+| Chrome DevTools integration      | Offline mode support            | Community voting/forks         |  
+| Export to Git repos              | Camera-driven UML diagramming   | AI-driven debugging assistant  |  
 
 ---
 
-## 🚀 Getting Started (Web Version)
+## 🛠️ Tech Stack  
+**Shared Core**  
+- Go 1.21+ • Yaegi (embedded runtime) • Redis • Firebase Realtime DB  
+- AI/ML: GPT-4o API + fine-tuned CodeLlama-34b (Go specialization)  
 
-### 🔧 Dev Setup
-```bash
-git clone https://github.com/VectroConsulting/GLAI.git && cd GLAI/web
-npm install  # or yarn install
-npm run dev  # start development server
+**Web Frontend**  
+- Next.js 14 (TypeScript) • Tailwind CSS • WebAssembly (TinyGo)  
+- Monaco Editor • WebSocket (real-time sync)  
 
-**🧠 Backend Execution Server (Optional)**
-cd backend-api
-go run main.go
-# Configure .env with API keys and routes
+**iOS Frontend**  
+- SwiftUI • CoreML (on-device models) • ARKit • CoreData  
+- CGo bindings for shared Go modules  
 
-📈 Roadmap Milestones
+**DevOps**  
+- AWS ECS/Fargate • Terraform • GitHub Actions  
+- Prometheus/Grafana monitoring • Fastlane (iOS CI/CD)  
 
-**Phase	Deliverable**
+---
 
-1	Responsive UI (PWA) + Prompt-to-code MVP
-2	Debugging + Test Runner + Code Enhancer
-3	Alpha Launch (Private Testers)
-4	Community & Collaboration Layer
-5	Plugin Ecosystem + Android & Desktop Support
+## 🚀 Getting Started  
 
-**🤝 Contributors Welcome!**
-We're looking for contributors in:
+### Prerequisites  
+- Go 1.21+ • Node 18+ • Xcode 15+ (for iOS)  
 
-🔧 ReactJS, TypeScript, PWA development
+### Installation  
+```bash  
+# Web App  
+git clone https://github.com/vectro-ai/gla-web  
+cd gla-web && npm install  
 
-💡 Golang API & Runtime Execution
+# iOS App  
+git clone https://github.com/vectro-ai/gla-ios  
+open gla-ios/GLAI.xcodeproj  
 
-🤖 Prompt Engineering / LLM Tuning
-
-🎨 UI/UX Design & QA
-
-🌱 DevRel & Community Building
-
-**Feel free to submit a pull request or email us.**
-
-💬 [Join Our Discord (Coming Soon)]
-
-📬 Email: act@vectroconsulting.com
-
-✨ Let’s Build the Future of Mobile-First Go Development
-
-GLAI isn’t just an app — it’s a movement to democratize Golang development through AI and open collaboration.
-
-"Code on the go. Learn fast. Share freely" with GLAI.
-
-
-
+# Shared Core  
+git clone https://github.com/vectro-ai/gla-core  
+cd gla-core && go mod download
