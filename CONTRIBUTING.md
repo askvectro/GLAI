@@ -1,77 +1,136 @@
-# 🤝 Contributing to GLAI
+Here’s your content fully updated and formatted as a clean `.md` (Markdown) file:
 
-Welcome, and thanks for your interest in contributing to **GLAI** — the Golang + AI web app project by Vectro Consulting Services! Whether you're a seasoned developer or a curious learner, you're welcome here.
+```markdown
+# 🤝 Contributing to GLAI (Web + iOS)
+
+Welcome to the cross-platform Go AI assistant project! We're excited you're here. 🌟
 
 ---
 
 ## 📜 Code of Conduct
-We follow a [Code of Conduct](./CODE_OF_CONDUCT.md) to ensure a welcoming and respectful community. Please read and follow it.
+
+All contributors must adhere to our [Code of Conduct](./CODE_OF_CONDUCT.md).  
+**Report issues** to [vectroconsulting](mailto:ask@vectroconsulting.com).
 
 ---
 
-## 📦 Project Structure
-```
-GLAI/
-├── web/               # React frontend (PWA)
-├── backend-api/       # Golang execution and test server
-├── shared-snippets/   # Community-contributed Go snippets
-├── docs/              # Documentation & assets
-└── .github/           # GitHub configs, workflows
-```
+## 🏗 Project Structure (Multi-Repo)
 
----
-
-## 🛠 How to Contribute
-### 🧩 1. Fork & Clone
 ```bash
-git clone https://github.com/YOUR-USERNAME/GLAI.git
-cd GLAI
+# Core Components
+gla-core/             # Shared Go modules, AI engine, and sync service
+├── llm/              # Fine-tuned Go code generation models
+└── sandbox/          # Secure execution environment
+
+# Platform Repositories
+gla-web/              # Web frontend (Next.js PWA)
+├── public/           # WASM build outputs
+└── components/       # Shared React UI library
+
+gla-ios/              # iOS app (SwiftUI)
+├── ARKit/            # Code visualization modules
+└── CoreML-Models/    # On-device AI models
 ```
 
-### 🌱 2. Create a Feature Branch
+---
+
+## 🛠 Cross-Platform Contribution Guide
+
+### 1. Choose Your Focus
+
 ```bash
-git checkout -b feature/your-feature-name
+# Web Developers
+git clone https://github.com/vectro-ai/gla-web
+cd gla-web && npm install
+
+# iOS Developers
+git clone https://github.com/vectro-ai/gla-ios
+open gla-ios/GLAI.xcodeproj
+
+# Core Engineers
+git clone https://github.com/vectro-ai/gla-core 
+cd gla-core && go mod download
 ```
 
-### 💡 3. Make Changes
-- Follow our code style guides (see `docs/style-guide.md`)
-- Write clear, self-documented code
-- Add/update test cases if applicable
+### 2. Branch Naming Convention
 
-### ✅ 4. Test Your Code
-- Use `npm run dev` for frontend testing
-- Use `go run main.go` for backend
+```bash
+git checkout -b [type]/[platform]-[description]
+# Examples:
+# feat/web-dark-mode
+# fix/ios-voice-input
+# docs/core-security
+```
 
-### 📬 5. Submit a Pull Request
-- Push your branch: `git push origin feature/your-feature-name`
-- Open a PR and **describe what you’ve done**
-- Tag any related issues in your PR description
+### 3. Cross-Repo Development
 
----
-
-## 💻 Local Development Setup
-Please refer to the [README.md](./README.md#-getting-started-web-version) for environment setup.
+- **API Changes:** Coordinate with `gla-core` maintainers first  
+- **UI Components:** Web/iOS teams sync via Figma  
+- **Testing:** Verify changes on both platforms if applicable  
 
 ---
 
-## 🙌 Areas You Can Help With
-- 🌐 Frontend (ReactJS, TypeScript, PWA)
-- ⚙️ Backend (Go APIs, Testing, Execution)
-- 🤖 Prompt Engineering, LLM Fine-Tuning
-- 🧪 Testing, QA, Bug Fixes
-- 🎨 UI/UX Design
-- 📚 Docs & Developer Experience
-- 🌱 Community Growth & Evangelism
+## ✅ Quality Standards
+
+| Platform | Linting            | Testing                   | Performance                 |
+|----------|--------------------|---------------------------|-----------------------------|
+| Web      | ESLint + TypeScript| Cypress + Jest            | Lighthouse CI ≥90           |
+| iOS      | SwiftLint          | XCTest + Snapshot         | <50ms input latency         |
+| Core     | golangci-lint      | Go test + Fuzz            | <3s AI response time        |
 
 ---
 
-## 🎁 Recognition
-All contributors will be acknowledged in our **Credits Section**. Major contributors may also be invited to become maintainers.
+## 🌟 Contribution Areas
+
+### Cross-Platform Specialties
+- Shared TypeScript/Go Types (protobuf schemas)  
+- Sync Service (Firebase/WebSocket optimizations)  
+- Security (WASM/iOS sandbox hardening)  
+
+### Platform-Specific Needs
+
+| Web                       | iOS                             | Core                          |
+|---------------------------|----------------------------------|-------------------------------|
+| Real-time collaboration   | ARKit integration               | AI prompt engineering         |
+| Browser extension APIs    | CoreML model optimization       | Go module security            |
+| WASM/Go interop           | Swift/Go CGo bindings           | Dependency vulnerability scans|
 
 ---
 
-## 🙏 Thank You
-GLAI thrives on the support of its community. Thanks for helping build the future of mobile-first Go development!
+## 🚀 PR Submission Process
 
-— Vectro Consulting Services
+**Multi-Repo Changes:**
+- File linked PRs using `gh pr create --linked`
+- Add `cross-platform` label
 
+**Attach Evidence:**
+- **Web:** Lighthouse report screenshot  
+- **iOS:** Xcode Instruments trace  
+- **Core:** Go benchmark comparisons  
+
+**Tag Maintainers:**
+- `@vectro-web-team`  
+- `@vectro-ios-team`  
+- `@vectro-core-team`  
+
+---
+
+## 🏆 Recognition Program
+
+- **Badges:** Earn platform-specific NFTs (iOS AR Badges / Web3 tokens)  
+- **Leaderboard:** Top contributors featured monthly  
+- **Swag:** Exclusive GLAI developer kits for major contributions  
+
+---
+
+## 🚨 Critical Contribution Notes
+
+- **Apple NDA:** Some iOS features require signed agreements  
+- **WASM Security:** All Go→WASM code must pass audit  
+- **AI Ethics:** Prompt engineering requires bias review  
+
+---
+
+Let’s build the future of Go development together! 🚀  
+Need help? email [vectroconsulting](mailto:ask@vectroconsulting.com).
+```
