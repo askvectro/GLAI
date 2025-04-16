@@ -1,0 +1,60 @@
+GLAI/
+├── README.md                     # Project overview (based on your description)
+├── CONTRIBUTING.md               # Contribution guidelines
+├── LICENSE                       # Root license file
+├── CODE_OF_CONDUCT.md            # Contributor code of conduct
+
+├── docs/                         # Architecture diagrams, roadmaps, whitepapers
+│   ├── architecture.md
+│   ├── roadmap.md
+│   └── governance.md
+
+├── gla-core/                     # Shared Go engine and AI services
+│   ├── llm/                      # Fine-tuned code generation models
+│   ├── sandbox/                  # Secure execution (Yaegi, WASM, Docker)
+│   ├── api/                      # API definitions and protobuf schemas
+│   ├── sync/                     # Firebase/WebSocket sync engine
+│   ├── security/                 # Sanitization layer, auditing
+│   ├── go.mod
+│   └── main.go
+
+├── gla-web/                      # Web frontend (Next.js PWA)
+│   ├── public/                   # Static assets, build output
+│   ├── components/               # Shared React components
+│   ├── pages/                    # Next.js pages
+│   ├── styles/                   # Tailwind or CSS modules
+│   ├── utils/                    # API connectors, helpers
+│   ├── tests/                    # Jest/Cypress tests
+│   ├── .eslintrc.js
+│   ├── tsconfig.json
+│   └── package.json
+
+├── gla-ios/                      # iOS app (SwiftUI)
+│   ├── ARKit/                    # AR visualization modules
+│   ├── CoreML-Models/           # On-device models
+│   ├── Views/                   # SwiftUI views
+│   ├── Services/                # Networking, Sync, AI calls
+│   ├── Assets.xcassets/
+│   ├── Info.plist
+│   └── GLAI.xcodeproj
+
+├── tests/                        # Cross-platform E2E tests
+│   ├── test_plan.md
+│   └── integration/
+
+├── scripts/                      # Automation scripts (build, deploy, audit)
+│   ├── deploy_web.sh
+│   ├── ios_build.sh
+│   └── audit.sh
+
+├── .github/                      # GitHub workflows & templates
+│   ├── workflows/
+│   │   ├── ci.yml
+│   │   ├── lint.yml
+│   │   └── fuzzing.yml
+│   └── ISSUE_TEMPLATE.md
+
+└── community/                    # Community engagement and feedback
+    ├── plugins/                 # User-submitted snippets/plugins
+    ├── reports/                 # Bias audits, license reports
+    └── summit/                  # GLAI Innovators events
