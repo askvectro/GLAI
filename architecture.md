@@ -125,12 +125,10 @@ The GLAI system architecture is composed of frontend clients communicating with 
 ```mermaid
 
 graph TD
-
   subgraph Frontend
     A[Web: Next.js 14] --> C[Shared Core API]
     B[iOS: SwiftUI and CoreML] --> C
   end
-
   subgraph Core_Services
     C --> D[AI Engine - GPT-4 and CodeLlama]
     C --> E[Execution Layer - Yaegi and WASM]
@@ -140,6 +138,6 @@ graph TD
 
 ---
 
-Have questions? Contact [Vectro](mailto:ask@vectroconsulting.com) !
+Have questions? Contact [Vectro](mailto:ask@vectroconsulting.com)!
 
 ```
