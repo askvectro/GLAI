@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package common.v1;
+option go_package = "gla-core/api/gen/go/common/v1;commonv1";
+
+// Standard error message
+message Error {
+  string code = 1;             // e.g., "SANDBOX_TIMEOUT"
+  string message = 2;          // Human-readable description
+  map<string, string> details = 3; // Optional key-value pairs
+}
+
+// Metadata attached to responses
+message Metadata {
+  string request_id = 1;
+  int64 timestamp = 2;         // Unix epoch in milliseconds
+  map<string, string> tags = 3;
+}

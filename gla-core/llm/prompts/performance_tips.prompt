@@ -1,0 +1,12 @@
+Analyze the following Go code for performance improvements:
+
+[Insert Go code snippet here]
+
+Please consider:
+- Algorithmic efficiency
+- Memory usage
+- Concurrency and parallelism
+- I/O operations
+- Any other performance bottlenecks
+
+Provide suggestions for optimization with explanations.

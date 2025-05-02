@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package sandbox.v1;
+option go_package = "gla-core/api/gen/go/sandbox/v1;sandboxv1";
+
+import "common.proto";
+
+// Supported execution engines
+enum EngineType {
+  ENGINE_UNSPECIFIED = 0;
+  YAEEGI = 1;
+  WASM = 2;
+  DOCKER = 3;
+}
+
+// Request to execute a code snippet
+message ExecuteRequest {
+  EngineType engine = 1;
+  string code = 2;
+  int32 timeout_seconds = 3;
+  map<string, string> environment = 4; // env vars
+}
+
+// Response after execution
+message ExecuteResponse {
+  string stdout = 1;
+  string stderr = 2;
+  int32 exit_code = 3;
+  common.v1.Metadata metadata = 4;
+}
+
+// Sandbox service definition
+service SandboxService {
+  rpc Execute(ExecuteRequest) returns (ExecuteResponse);
+}

@@ -1,0 +1,65 @@
+openapi: 3.0.3
+info:
+  title: Sandbox Execution API
+  version: 1.0.0
+  description: API for securely executing code snippets using various sandboxing backends (Yaegi, WASM, Docker).
+
+paths:
+  /v1/sandbox/execute:
+    post:
+      summary: Execute code securely in sandbox
+      operationId: executeSandbox
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExecutionRequest'
+      responses:
+        '200':
+          description: Code executed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExecutionResponse'
+        '400':
+          description: Invalid execution request
+        '500':
+          description: Sandbox execution failure
+
+components:
+  schemas:
+    ExecutionRequest:
+      type: object
+      properties:
+        code:
+          type: string
+        language:
+          type: string
+          enum: [go, wasm, docker]
+        timeout_sec:
+          type: integer
+          default: 5
+        input:
+          type: string
+      required:
+        - code
+        - language
+
+    ExecutionResponse:
+      type: object
+      properties:
+        output:
+          type: string
+        error:
+          type: string
+        metadata:
+          $ref: '#/components/schemas/Metadata'
+
+    Metadata:
+      type: object
+      properties:
+        execution_time_ms:
+          type: integer
+        backend:
+          type: string

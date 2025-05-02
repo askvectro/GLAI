@@ -1,0 +1,64 @@
+openapi: 3.0.3
+info:
+  title: LLM Generation API
+  version: 1.0.0
+  description: API for generating code using fine-tuned language models.
+
+paths:
+  /v1/llm/generate:
+    post:
+      summary: Generate code from prompt
+      operationId: generateLLM
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LLMRequest'
+      responses:
+        '200':
+          description: Successfully generated code
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LLMResponse'
+        '400':
+          description: Invalid request
+        '500':
+          description: Internal server error
+
+components:
+  schemas:
+    LLMRequest:
+      type: object
+      properties:
+        prompt:
+          type: string
+        language:
+          type: string
+          example: go
+        temperature:
+          type: number
+          format: float
+        max_tokens:
+          type: integer
+      required:
+        - prompt
+
+    LLMResponse:
+      type: object
+      properties:
+        code:
+          type: string
+        metadata:
+          $ref: '#/components/schemas/Metadata'
+
+    Metadata:
+      type: object
+      properties:
+        timestamp:
+          type: integer
+        source:
+          type: string
+        user_id:
+          type: string

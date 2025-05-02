@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package llm.v1;
+option go_package = "gla-core/api/gen/go/llm/v1;llmv1";
+
+import "common.proto";
+
+// Request to generate code from a prompt
+message GenerateRequest {
+  string prompt = 1;
+  string model = 2; // optional model override
+  map<string, string> parameters = 3; // temperature, max_tokens, etc.
+}
+
+// Response with generated code
+message GenerateResponse {
+  string generated_code = 1;
+  common.v1.Metadata metadata = 2;
+}
+
+// LLM generation service definition
+service LLMService {
+  rpc Generate(GenerateRequest) returns (GenerateResponse);
+}
